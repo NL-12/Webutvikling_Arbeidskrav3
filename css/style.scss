@@ -12,6 +12,14 @@ html {
     }
 }
 
+// linje 16 til 21, dette er midlertidig kode som kommer fra https://stackoverflow.com/a/56649741
+details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
 header {
     nav {
         ul {

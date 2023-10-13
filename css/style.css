@@ -11,6 +11,14 @@ html body {
   background-color: #efefef;
 }
 
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 header nav ul {
   list-style-type: none;
 }
