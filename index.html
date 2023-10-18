@@ -5,48 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/6e7e32dccf.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="widget.js"></script>
     <title>Komfortable Til Gangs: Hjem</title>
 </head>
 <body>
 
     <header>
+        <nav id="widget-content-nav" class="hidden">
+            <p id="widget-closer-nav"><span class="fa-solid fa-x"></span></p>
+            <ul>
+                <li><a href="produkt.html"><p>Løpesko Vei</p></o></a></li>
+                <li><a href="produkt.html"><p>Løpesko Sti</p></a></li>
+                <li><a href="produkt.html"><p>Løpesko Fjell</p></a></li>
+                <li><a href="blog-page.html"><p>Blogg</p></a></li>
+                <li><a href="#"><p>Bruker</p></a></li>
+                <li><a href="#"><p>Handlekurv</p></a></li>
+            </ul>
+            <ul>
+                <li><a href="#"><p>Ofte stilte spørsmål</p></a></li>
+                <li><a href="#"><p>Kundefordeler</p></a></li>
+                <li><a href="#"><p>Retur og bytte</p></a></li>
+                <li><a href="#"><p>Levering</p></a></li>
+                <li><a href="#"><p>Reklamasjon</p></a></li>
+                <li><a href="#"><p>Betaling</p></a></li>
+                <li><a href="#"><p>Kjøpsbetingelser</p></a></li>
+                <li><a href="#"><p>Personvern og datasikkerhet</p></a></li>
+            </ul>
+            <ul>
+                <li><a href="https://www.instagram.com/" target="_blank"><span class="fa-solid fa-instagram"></span></a></li>
+                <li><a href="https://nb-no.facebook.com/" target="_blank"><span class="fa-solid fa-facebook"></span></a></li>
+                <li><a href="https://www.snapchat.com/" target="_blank"><span class="fa-solid fa-snapchat"></span></a></li>
+                <li><a href="#" target="_blank"><span class="fa-solid fa-envelope"></span></a></li>
+            </ul>
+            </nav>
         <nav>
             <ul>
-                <li>
-                    <details>
-                        <summary><span class="fa-solid fa-bars"></span></summary>
-                        <nav>
-                            <ul>
-                                <li><a href="produkt.html"><p>Løpesko Vei</p></o></a></li>
-                                <li><a href="produkt.html"><p>Løpesko Sti</p></a></li>
-                                <li><a href="produkt.html"><p>Løpesko Fjell</p></a></li>
-                                <li><a href="blog-page.html"><p>Blogg</p></a></li>
-                                <li><a href="#"><p>Bruker</p></a></li>
-                                <li><a href="#"><p>Handlekurv</p></a></li>
-                            </ul>
-                        </nav>
-                        <hr>
-                        <nav>
-                            <ul>
-                                <li><a href="#"><p>Ofte stilte spørsmål</p></a></li>
-                                <li><a href="#"><p>Kundefordeler</p></a></li>
-                                <li><a href="#"><p>Retur og bytte</p></a></li>
-                                <li><a href="#"><p>Levering</p></a></li>
-                                <li><a href="#"><p>Reklamasjon</p></a></li>
-                                <li><a href="#"><p>Betaling</p></a></li>
-                                <li><a href="#"><p>Kjøpsbetingelser</p></a></li>
-                                <li><a href="#"><p>Personvern og datasikkerhet</p></a></li>
-                            </ul>
-                            <hr>
-                            <ul>
-                                <li><a href="https://www.instagram.com/" target="_blank"><span class="fa-solid fa-instagram"></span></a></li>
-                                <li><a href="https://nb-no.facebook.com/" target="_blank"><span class="fa-solid fa-facebook"></span></a></li>
-                                <li><a href="https://www.snapchat.com/" target="_blank"><span class="fa-solid fa-snapchat"></span></a></li>
-                                <li><a href="#" target="_blank"><span class="fa-solid fa-envelope"></span></a></li>
-                            </ul>
-                        </nav>
-                    </details>
-                </li>
+                <li id="widget-toggler-nav"><span class="fa-solid fa-bars"></span></li>
                 <li><a href="index.html"><span class="fa-solid fa-person-running"></span> Komfortable Til Gangs</a></li>
                 <li><a href="#"><span class="fa-solid fa-user"></span></a></li>
                 <li><a href="#"><span class="fa-solid fa-cart-shopping"></span></a></li>
@@ -65,15 +59,6 @@
         </article>
 
         <section>
-            <h3>Populære produkter</h3>
-            <a href="produkt.html"><img src="img/pink-4973985_640.jpg" alt=""></a>
-            <a href="produkt.html"><img src="img/running-shoe-321199_640.jpg" alt=""></a>
-            <a href="produkt.html"><img src="img/running-shoe-371624_640.jpg" alt=""></a>
-            <a href="produkt.html"><img src="img/black-4973981_640.jpg" alt=""></a>
-            <p>Se alle <a class="fa-solid fa-circle-arrow-right"></a></p>
-        </section>
-
-        <section>
             <h3>Kategorier</h3>
             <article>
                 <h4>Løpesko Vei</h4>
@@ -87,6 +72,15 @@
                 <h4>Løpesko Fjell</h4>
                 <p>Se alle</p>
             </article>
+        </section>
+
+        <section>
+            <h3>Populære produkter</h3>
+            <a href="produkt.html"><img src="img/pink-4973985_640.jpg" alt=""></a>
+            <a href="produkt.html"><img src="img/running-shoe-321199_640.jpg" alt=""></a>
+            <a href="produkt.html"><img src="img/running-shoe-371624_640.jpg" alt=""></a>
+            <a href="produkt.html"><img src="img/black-4973981_640.jpg" alt=""></a>
+            <p>Se alle <a class="fa-solid fa-circle-arrow-right"></a></p>
         </section>
 
         <article>
@@ -105,26 +99,40 @@
                 <li><a href="#" target="_blank"><span class="fa-solid fa-envelope"></span></a></li>
             </ul>
         </nav>
-        <details>
-            <summary><p>Kundeservice <span class="fa-solid fa-circle-arrow-down"></span></p></summary>
-            <nav id = "questions-and-answers">
-                <ul>
-                    <li><a href="#"><p>Ofte stilte spørsmål</p></a></li>
-                    <li><a href="#"><p>Kundefordeler</p></a></li>
-                    <li><a href="#"><p>Retur og bytte</p></a></li>
-                    <li><a href="#"><p>Levering</p></a></li>
-                    <li><a href="#"><p>Reklamasjon</p></a></li>
-                    <li><a href="#"><p>Betaling</p></a></li>
-                    <li><a href="#"><p>Kjøpsbetingelser</p></a></li>
-                    <li><a href="#"><p>Personvern og datasikkerhet</p></a></li>
-                </ul>
-            </nav>
-        </details>
+        <p>Kundeservice <span id="widget-toggler-qanda" class="fa-solid fa-circle-arrow-down"></span></p>
+        <nav id="widget-content-qanda" class="hidden">
+            <ul>
+                <li><a href="#"><p>Ofte stilte spørsmål</p></a></li>
+                <li><a href="#"><p>Kundefordeler</p></a></li>
+                <li><a href="#"><p>Retur og bytte</p></a></li>
+                <li><a href="#"><p>Levering</p></a></li>
+                <li><a href="#"><p>Reklamasjon</p></a></li>
+                <li><a href="#"><p>Betaling</p></a></li>
+                <li><a href="#"><p>Kjøpsbetingelser</p></a></li>
+                <li><a href="#"><p>Personvern og datasikkerhet</p></a></li>
+            </ul>
+        </nav>
 
         <aside>
             <li><p>Bli medlem, gratis!</p></li>
         </aside>
     </footer>
+
+    <script>
+        let togglerElementNAV = document.getElementById("widget-toggler-nav")
+        let closerElementNAV = document.getElementById("widget-closer-nav")
+        togglerElementNAV.addEventListener("click", (e) => {
+            toggleWidget("widget-content-nav", "widget-toggler-nav")
+        })
+        closerElementNAV.addEventListener("click", (e) => {
+            toggleWidget("widget-content-nav", "widget-toggler-nav")
+        })
+
+        let togglerElementQANDA = document.getElementById("widget-toggler-qanda")
+        togglerElementQANDA.addEventListener("click", (e) => {
+            toggleWidget("widget-content-qanda", "widget-toggler-qanda")
+        })
+    </script>
 
 </body>
 </html>
