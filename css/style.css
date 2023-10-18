@@ -28,4 +28,27 @@ header nav ul li a {
 
 .hidden {
   display: none;
+}
+
+header {
+  grid-area: headerArea;
+}
+
+main {
+  grid-area: mainArea;
+}
+
+aside {
+  grid-area: asideArea;
+}
+
+footer {
+  grid-area: footerArea;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "headerArea" "mainArea" "footerArea" "asideArea";
 }/*# sourceMappingURL=style.css.map */
