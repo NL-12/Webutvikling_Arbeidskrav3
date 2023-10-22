@@ -10,43 +10,240 @@
 </head>
 <body>
     <div id="grid-container">
-        <header>
-            <nav id="widget-content-nav" class="hidden">
-                <p id="widget-closer-nav">
-                    <span class="fa-solid fa-x"></span>
-                </p>
+        <header class="header-flex">
+            <nav>
                 <ul>
-                    <li>
-                        <a href="produkt.html">
-                            <p>Løpesko Vei</p>
-                        </a>
+                    <li id="widget-toggler-nav">
+                        <span id="widget-toggler-nav-button" class="fa-solid fa-bars"></span>
+                        <nav id="widget-content-nav" class="hidden">
+                            <p id="widget-closer-nav-button">
+                                <span class="fa-solid fa-x"></span>
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="produkt.html">
+                                        <p>Løpesko Vei</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="produkt.html">
+                                        <p>Løpesko Sti</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="produkt.html">
+                                        <p>Løpesko Fjell</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blog-page.html">
+                                        <p>Blogg</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Bruker</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Handlekurv</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>Ofte stilte spørsmål</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Kundefordeler</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Retur og bytte</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Levering</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Reklamasjon</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Betaling</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Kjøpsbetingelser</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Personvern og datasikkerhet</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <span class="fa-solid fa-instagram"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://nb-no.facebook.com/" target="_blank">
+                                        <span class="fa-solid fa-facebook"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.snapchat.com/" target="_blank">
+                                        <span class="fa-solid fa-snapchat"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <span class="fa-solid fa-envelope"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </li>
                     <li>
-                        <a href="produkt.html">
-                            <p>Løpesko Sti</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="produkt.html">
-                            <p>Løpesko Fjell</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="blog-page.html">
-                            <p>Blogg</p>
+                        <a href="index.html">
+                            <span class="fa-solid fa-person-running"></span> Komfortable Til Gangs
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <p>Bruker</p>
+                            <span class="fa-solid fa-user"></span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <p>Handlekurv</p>
+                            <span class="fa-solid fa-cart-shopping"></span>
                         </a>
                     </li>
                 </ul>
+                <form>
+                    <label for="search">
+                        <span class="fa-solid fa-magnifying-glass"></span>
+                    </label>
+                    <input type="text" id="search" name="search">
+                </form>
+            </nav>
+        </header>
+
+        <main class="main-flex">
+            <article>
+                <h2>Alt du behøver for å lykkes med jogging</h2>
+                <p>Se hele utvalget her <a class="fa-solid fa-circle-arrow-right"></a></p>
+            </article>
+
+            <section>
+                <h3>Kategorier</h3>
+                <article>
+                    <h4>Løpesko Vei</h4>
+                    <p>Se alle</p>
+                </article>
+                <article>
+                    <h4>Løpesko Sti</h4>
+                    <p>Se alle</p>
+                </article>
+                <article>
+                    <h4>Løpesko Fjell</h4>
+                    <p>Se alle</p>
+                </article>
+            </section>
+
+            <section class="grid-flex popular-products">
+                <h3>Populære produkter</h3>
+                <article>
+                    <h4>Super Sko XX-Ultra</h4>
+                    <a href="produkt.html">
+                        <img src="img/running-shoe-321199_640.jpg" alt="">
+                    </a>
+                    <p>
+                        Bildet er tatt av <a href="https://pixabay.com/no/users/stux-12364/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=321199">Stefan Schweihofer</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=321199">Pixabay</a>
+                    </p>
+                </article>
+                <article>
+                    <h4>Supreme Stride</h4>
+                    <a href="produkt.html">
+                        <img src="img/running-shoe-371624_640.jpg" alt="">
+                    </a>
+                    <p>
+                        Bildet er tatt av <a href="https://pixabay.com/no/users/stux-12364/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371624">Stefan Schweihofer</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371624">Pixabay</a>
+                    </p>
+                </article>
+                <article>
+                    <h4>Off-Road Super Champ</h4>
+                    <a href="produkt.html">
+                        <img src="img/running-shoe-371625_640.jpg" alt="">
+                    </a>
+                    <p>
+                        Bildet er tatt av <a href="https://pixabay.com/no/users/stux-12364/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371625">Stefan Schweihofer</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=371625">Pixabay</a>
+                    </p>
+                </article>
+                <article>
+                    <h4>Giga Foot Shoe</h4>
+                    <a href="produkt.html">
+                        <img src="img/shoe-1772074_640.jpg" alt="">
+                    </a>
+                    <p>
+                        Bildet er tatt av <a href="https://pixabay.com/no/users/cegoh-94852/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1772074">Jason Goh</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1772074">Pixabay</a>
+                    </p>
+                </article>
+                <p>
+                    <a href="produkt.html">
+                        Se alle <span class="fa-solid fa-circle-arrow-right"></span>
+                    </a>
+                </p>
+            </section>
+
+            <article>
+                <h2>[Overskriften til det siste blogginnlegget]</h2>
+                <a href="blog-side.html">
+                    <p>Les innlegget her
+                        <span class="fa-solid fa-circle-arrow-right"></span>
+                    </p>
+                </a>
+            </article>
+        </main>
+
+        <footer>
+            <a href="#top"><p>Til toppen <span class="fa-solid fa-circle-arrow-up"></span></p></a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <span class="fa-solid fa-instagram"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://nb-no.facebook.com/" target="_blank"><span class="fa-solid fa-facebook"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.snapchat.com/" target="_blank"><span class="fa-solid fa-snapchat"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><span class="fa-solid fa-envelope"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p>Kundeservice <span id="widget-toggler-qanda" class="fa-solid fa-circle-arrow-down"></span></p>
+            <nav id="widget-content-qanda" class="hidden">
                 <ul>
                     <li>
                         <a href="#">
@@ -89,134 +286,22 @@
                         </a>
                     </li>
                 </ul>
-                <ul>
-                    <li>
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <span class="fa-solid fa-instagram"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://nb-no.facebook.com/" target="_blank">
-                            <span class="fa-solid fa-facebook"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.snapchat.com/" target="_blank">
-                            <span class="fa-solid fa-snapchat"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <span class="fa-solid fa-envelope"></span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li id="widget-toggler-nav">
-                        <span class="fa-solid fa-bars"></span>
-                    </li>
-                    <li>
-                        <a href="index.html">
-                            <span class="fa-solid fa-person-running"></span> Komfortable Til Gangs
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="fa-solid fa-user"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="fa-solid fa-cart-shopping"></span>
-                        </a>
-                    </li>
-                </ul>
-                <form>
-                    <label for="search">
-                        <span class="fa-solid fa-magnifying-glass"></span>'
-                    </label>
-                    <input type="text" id="search" name="search">
-                </form>
-            </nav>
-        </header>
-
-        <main>
-            <article>
-                <h2>Alt du behøver for å lykkes med jogging</h2>
-                <p>Se hele utvalget her <a class="fa-solid fa-circle-arrow-right"></a></p>
-            </article>
-
-            <section>
-                <h3>Kategorier</h3>
-                <article>
-                    <h4>Løpesko Vei</h4>
-                    <p>Se alle</p>
-                </article>
-                <article>
-                    <h4>Løpesko Sti</h4>
-                    <p>Se alle</p>
-                </article>
-                <article>
-                    <h4>Løpesko Fjell</h4>
-                    <p>Se alle</p>
-                </article>
-            </section>
-
-            <section>
-                <h3>Populære produkter</h3>
-                <a href="produkt.html"><img src="img/pink-4973985_640.jpg" alt=""></a>
-                <a href="produkt.html"><img src="img/running-shoe-321199_640.jpg" alt=""></a>
-                <a href="produkt.html"><img src="img/running-shoe-371624_640.jpg" alt=""></a>
-                <a href="produkt.html"><img src="img/black-4973981_640.jpg" alt=""></a>
-                <p>Se alle <a class="fa-solid fa-circle-arrow-right"></a></p>
-            </section>
-
-            <article>
-                <h2>[Overskriften til det siste blogginnlegget]</h2>
-                <a href="blog-side.html"><p>Les innlegget her <span class="fa-solid fa-circle-arrow-right"></span></p></a>
-            </article>
-        </main>
-
-        <footer>
-            <li><a href="#top"><p>Til toppen <span class="fa-solid fa-circle-arrow-up"></span></p></a></li>
-            <nav>
-                <ul>
-                    <li><a href="https://www.instagram.com/" target="_blank"><span class="fa-solid fa-instagram"></span></a></li>
-                    <li><a href="https://nb-no.facebook.com/" target="_blank"><span class="fa-solid fa-facebook"></span></a></li>
-                    <li><a href="https://www.snapchat.com/" target="_blank"><span class="fa-solid fa-snapchat"></span></a></li>
-                    <li><a href="#" target="_blank"><span class="fa-solid fa-envelope"></span></a></li>
-                </ul>
-            </nav>
-            <p>Kundeservice <span id="widget-toggler-qanda" class="fa-solid fa-circle-arrow-down"></span></p>
-            <nav id="widget-content-qanda" class="hidden">
-                <ul>
-                    <li><a href="#"><p>Ofte stilte spørsmål</p></a></li>
-                    <li><a href="#"><p>Kundefordeler</p></a></li>
-                    <li><a href="#"><p>Retur og bytte</p></a></li>
-                    <li><a href="#"><p>Levering</p></a></li>
-                    <li><a href="#"><p>Reklamasjon</p></a></li>
-                    <li><a href="#"><p>Betaling</p></a></li>
-                    <li><a href="#"><p>Kjøpsbetingelser</p></a></li>
-                    <li><a href="#"><p>Personvern og datasikkerhet</p></a></li>
-                </ul>
             </nav>
         </footer>
 
         <aside>
-            <li><p>Bli medlem, gratis!</p></li>
+            <p>Bli medlem, gratis!</p>
         </aside>
     </div>
 
     <script>
-        let togglerElementNAV = document.getElementById("widget-toggler-nav")
-        let closerElementNAV = document.getElementById("widget-closer-nav")
+        let togglerElementNAV = document.getElementById("widget-toggler-nav-button")
+        let closerElementNAV = document.getElementById("widget-closer-nav-button")
         togglerElementNAV.addEventListener("click", (e) => {
-            toggleWidget("widget-content-nav", "widget-toggler-nav")
+            toggleWidget("widget-content-nav")
         })
         closerElementNAV.addEventListener("click", (e) => {
-            toggleWidget("widget-content-nav", "widget-toggler-nav")
+            toggleWidget("widget-content-nav")
         })
 
         let togglerElementQANDA = document.getElementById("widget-toggler-qanda")

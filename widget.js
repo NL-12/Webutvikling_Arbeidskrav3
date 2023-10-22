@@ -1,11 +1,8 @@
-function toggleWidget(contentID, togglerID) {
-    let contentElement = document.getElementById(contentID)
+function toggleWidget(togglerID) {
     let togglerElement = document.getElementById(togglerID)
-    if (contentElement.classList.contains("hidden")) {
-        contentElement.classList.remove("hidden")
-        togglerElement.classList.add("hidden")
-    } else {
-        contentElement.classList.add("hidden")
+    if (togglerElement.classList.contains("hidden")) {
         togglerElement.classList.remove("hidden")
+    } else {
+        togglerElement.classList.add("hidden")
     }
 }
