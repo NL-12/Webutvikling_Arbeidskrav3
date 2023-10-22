@@ -79,7 +79,7 @@ section > a > img {
     right: 0;
     width: auto;
     margin-right: -10000px;
-    max-width: 500px;
+    max-width: 800px;
     z-index: 9999;
     background-color: lightgray;
 }
@@ -116,7 +116,7 @@ section > a > img {
 }
 
 .popular-products img {
-    width: 80%;
+    width: 85%;
 }
 .popular-products article {
     flex-basis: 50%;
@@ -133,6 +133,33 @@ section > a > img {
     flex-basis: 100%;
 }
 .popular-products h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.categories-products img {
+    width: 100%;
+    object-fit: fill;
+}
+.categories-products article {
+    flex-basis: 30%;
+    margin: 0.5rem auto;
+    text-align: center;
+}
+.categories-products article > p {
+    font-size: 0.5rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.categories-products a > p {
+    text-align: left;
+    font-size: 0.8rem;
+}
+.categories-products h3 {
+    flex-basis: 100%;
+}
+.categories-products h4 {
     margin: 0;
     padding: 0;
 }
