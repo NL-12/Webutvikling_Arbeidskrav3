@@ -15,8 +15,24 @@ html > body {
     display: none;
 }
 
+a:visited {
+    color: #000;
+}
+a:link {
+    color: #000;
+}
+
 header {
     grid-area: headerArea;
+    font-size: 1.3rem;
+    margin: 0.3rem 0;
+    color: #6C2F62;
+}
+header a:visited {
+    color: #6C2F62;
+}
+header a:link {
+    color: #6C2F62;
 }
 header > nav {
     margin: 0;
@@ -60,6 +76,12 @@ section > a > img {
     max-width: 3rem;
     max-height: 40%;
 }*/
+#search {
+    flex-basis: 100%;
+}
+#search input {
+    width: 91%;
+}
 
 #grid-container {
     display: grid;
@@ -88,6 +110,16 @@ section > a > img {
 }
 #widget-toggler-nav {
     position: relative;
+}
+
+.hero {
+    background-color: #6C2F62;
+    color: #fff;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+.hero>a:visited {
+    color: #fff;
 }
 
 .header-flex {
