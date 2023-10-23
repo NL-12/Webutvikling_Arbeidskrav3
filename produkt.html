@@ -1,23 +1,27 @@
+<!--- Standard HTML her i DOCTYPE og ned til slutten av head. style.css ligger i css og inneholder alt av css. Den første script-taggen er for font-awesome, den andre for min egen JavaScript funksjon. -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/6e7e32dccf.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="widget.js"></script>
+    <script src="widget.js"></script>
     <title>Komfortable Til Gangs: Produkt</title>
 </head>
 <body>
+    <!--- Her bruker jeg en div for å "wrappe" alle elementer i en grid. div blir brukt her spesifikt fordi den ikke har en semantisk verdi. -->
     <div id="grid-container">
+        <!-- Alt i header ligger inne i en flex container for å være responsivt og ligge riktig på nettsiden. -->
         <header class="header-flex">
             <nav>
                 <ul>
+                    <!--- Dette er ikke en ideel løsning, men for å få min hamburger-meny for å ligge under knappen riktig har jeg nøstet nav i nav. Dette er fordi den ytre nav har en position realtive og den indre position absolute.. Denne indre nav elementet er skjult og så gjort synlig med JavaScript. -->
                     <li id="widget-toggler-nav">
-                        <span id="widget-toggler-nav-button" class="fa-solid fa-bars"></span>
+                        <i id="widget-toggler-nav-button" class="fa-solid fa-bars"></i>
                         <nav id="widget-content-nav" class="hidden">
                             <p id="widget-closer-nav-button">
-                                <span class="fa-solid fa-x"></span>
+                                <i class="fa-solid fa-x"></i>
                             </p>
                             <ul>
                                 <li>
@@ -98,19 +102,19 @@
                             <ul id="social-icons-menu">
                                 <li>
                                     <a href="https://www.instagram.com/" target="_blank">
-                                        <span class="fa-brands fa-instagram"></span>
+                                        <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://nb-no.facebook.com/" target="_blank"><span class="fa-brands fa-facebook"></span>
+                                    <a href="https://nb-no.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.snapchat.com/" target="_blank"><span class="fa-brands fa-snapchat"></span>
+                                    <a href="https://www.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank"><span class="fa-solid fa-envelope"></span>
+                                    <a href="#" target="_blank"><i class="fa-solid fa-envelope"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -118,37 +122,38 @@
                     </li>
                     <li>
                         <a href="index.html">
-                            <span class="fa-solid fa-person-running"></span> Komfortable Til Gangs
+                            <i class="fa-solid fa-person-running"></i> Komfortable Til Gangs
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="fa-solid fa-user"></span>
+                            <i class="fa-solid fa-user"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="fa-solid fa-cart-shopping"></span>
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </a>
                     </li>
                 </ul>
-                <form id="search">
+                <form id="search-con">
                     <label for="search">
-                        <span class="fa-solid fa-magnifying-glass"></span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </label>
-                    <input type="text" name="search">
+                    <input type="text" id="search" name="search">
                 </form>
             </nav>
+            <!-- Unikt for produkt og blog. brødsmuler for å se hvor på nettsiden du befinner deg. -->
             <nav id="breadcrumbs">
                 <ul>
                     <li>
-                        <a href="#">Herre</a> <span class="fa-solid fa-arrow-right"></span>
+                        <a href="#">Herre</a> <i class="fa-solid fa-arrow-right"></i>
                     </li>
                     <li>
-                        <a href="#">Løpesko Sti</a> <span class="fa-solid fa-arrow-right"></span>
+                        <a href="#">Løpesko Sti</a> <i class="fa-solid fa-arrow-right"></i>
                     </li>
                     <li>
-                        <a href="#">Tilbud</a> <span class="fa-solid fa-arrow-right"></span>
+                        <a href="#">Tilbud</a> <i class="fa-solid fa-arrow-right"></i>
                     </li>
                     <li>
                         Giga Foot Shoe
@@ -158,37 +163,37 @@
         </header>
         
         <main>
+            <!-- Dette virker som i index, en stor flex container. med flex-basis høy nok kan elemtene være på hver sin linje og samtidig være responsive. -->
             <article class="grid-flex product-card">
-                <h2 class="indent">Giga Foot Shoe</h4>
+                <h4 class="indent">Giga Foot Shoe</h4>
                 <img src="img/shoe-1772074_640.jpg" alt="Et par svarte Nike joggesko med hvit markering og hvite soler mot en hvit bakgrunn.">
                 <p class="credit-text">Bildet er tatt av <a href="https://pixabay.com/no/users/cegoh-94852/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1772074">Jason Goh</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1772074">Pixabay</a></p>
                 <p>2099,-</p>
                 <p><a href="#">Vurderinger</a></p>
                 <p class="make-justify">Praesent in ex eu lorem rhoncus aliquet. Ut pretium tortor sit amet nisi consequat, vitae eleifend tellus auctor. Aliquam erat volutpat. Nunc lobortis auctor turpis eget pellentesque. Nullam at nulla ac risus tempor faucibus eu sit amet quam. In molestie erat vel dictum dignissim.</p>
                 <p class="make-center">Stabilitet:
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle circle-empty"></span>
-                    <span class="fa-solid fa-circle circle-empty"></span>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle circle-empty"></i>
+                    <i class="fa-solid fa-circle circle-empty"></i>
                 </p>
                 <p class="make-center">Støtdemping:
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle circle-empty"></span>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle circle-empty"></i>
                 </p>
                 <p class="make-center">Løpsfølelse:
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle"></span>
-                    <span class="fa-solid fa-circle"></span>
-                    </span>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
                 </p>
                 <form>
-                    <label for="size">Velg størrelse <span class="fa-solid fa-circle-arrow-down"></span></label>
+                    <label for="size">Velg størrelse <i class="fa-solid fa-circle-arrow-down"></i></label>
                     <br>
                     <select id="size" name="size">
                         <option value="40">40</option>
@@ -202,29 +207,32 @@
             </article>
         </main>
 
+        <!-- Her er footeren som også er en flex container. -->
         <footer class="grid-flex qanda">
+            <!-- En knapp for å gå tilbake til toppen av nettsiden. -->
             <p id="back-top">
                 <a href="#top">
-                    Til toppen <span class="fa-solid fa-circle-arrow-up"></span>
+                    Til toppen <i class="fa-solid fa-circle-arrow-up"></i>
                 </a>
             </p>
+            <!--- Tre sosiale medie ikoner på linke. -->
             <nav class="social-icons">
                 <ul>
                     <li>
                         <a href="https://www.instagram.com/" target="_blank">
-                            <span class="fa-brands fa-instagram"></span>
+                            <i class="fa-brands fa-instagram"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://nb-no.facebook.com/" target="_blank"><span class="fa-brands fa-facebook"></span>
+                        <a href="https://nb-no.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.snapchat.com/" target="_blank"><span class="fa-brands fa-snapchat"></span>
+                        <a href="https://www.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><span class="fa-solid fa-envelope"></span>
+                        <a href="#" target="_blank"><i class="fa-solid fa-envelope"></i>
                         </a>
                     </li>
                 </ul>
@@ -262,6 +270,7 @@
             </nav>
         </footer>
 
+        <!-- Asiden har blitt forenklet fra wireframen. Den er her en "mini-hero" som enten strekker seg bortover siden på mobil, eller blir en firkant på desktop. -->
         <aside class="mini-hero">
             <p>
                 <a href="#">Bli medlem, gratis!</a>
@@ -271,6 +280,7 @@
     </div>
 
     <script>
+        // Her legges det til eventlisterns på meny knappen og den skulte "x" knappen slik at de kan åpnes og lukkes.
         let togglerElementNAV = document.getElementById("widget-toggler-nav-button")
         let closerElementNAV = document.getElementById("widget-closer-nav-button")
         togglerElementNAV.addEventListener("click", (e) => {

@@ -1,19 +1,32 @@
+/* Jeg bruker en stjerne (*) selektor for å sette dette på alle elementer. Dette er en css regel som påvirker hvordan css håndtere at jeg setter størrelse på elementer. */
 * {
     box-sizing: border-box;
 }
+
+
+
+/* Her setter jeg regler som skal gjelde for hoved html-taggene. Som at font-size skal være relativ til skjermstørrelsen. Margin blir satt på 0 så jeg kan selv velge en verdi senere. Med font valgte jeg å bruke et enkelt sans-serif font som Arial. Det er ikke fancy, men det ser greit ut. */
 html {
     font-size: calc(1em + 1vw);
 }
-
 html > body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
+header, footer > nav {
+    margin: 0;
+}
 
+
+
+/* En klasse JavaScript skal bruke for å skulle elementer. */
 .hidden {
     display: none;
 }
 
+
+
+/* Styling for å holde teksten til lenker konsekvent. Jeg har sørget for å bevare understreken så det er tydelig at det er en linke. */
 a:visited {
     color: #000;
 }
@@ -22,10 +35,21 @@ a:link {
 }
 
 
-header, footer > nav {
-    margin: 0;
+
+/* Her definerer jeg navnene til mine grid-areas, og nedenfor disse er også header. */
+main {
+    grid-area: mainArea;
+}
+aside {
+    grid-area: asideArea;
+}
+footer {
+    grid-area: footerArea;
 }
 
+
+
+/* En del forskjellig styling for å gjøre så listen innenfor header blir inline og ikke ser ut som en liste. Samt annet pynt. */
 header {
     grid-area: headerArea;
     font-size: 1.3rem;
@@ -56,9 +80,12 @@ header > nav > form > label {
     width: 100%;
 }
 header > nav > form > input {
-    /*flex-basis: 90%;*/
     width: 100%;
 }
+
+
+
+/* Styling for teksten på produkt og blog-siden i tillegg til å gi den flex-basis 100% så den er på en egen linke. */
 #breadcrumbs {
     font-size: 0.8rem;
     flex-basis: 100%;
@@ -67,25 +94,19 @@ header > nav > form > input {
     text-decoration: underline;
 }
 
-main {
-    grid-area: mainArea;
-}
 
-aside {
-    grid-area: asideArea;
-}
 
-footer {
-    grid-area: footerArea;
-}
-
-#search {
+/* Styling så søkebaren er på en egen linke i en flex. */
+#search-con {
     flex-basis: 100%;
 }
-#search input {
+#search-con input {
     width: 90%;
 }
 
+
+
+/* grid-en som dekker hele siden og omfatter alle områdene. På mobil er dette som standard med 1 kolone og 4 rader. maks bredde er 1200px etter hvilket jeg anser du er på desktop versjonen. */
 #grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -97,6 +118,9 @@ footer {
     max-width: 1200px;
 }
 
+
+
+/* Alt dette er styling for den skulte hamburger-menyen som åpnes med JavaScript. margin-right: -10000px er en hack, så det er ikke ideelt, men det gir ingen feilmelding og alt virker så det er beholdt siden menyen ikke er en stor del av oppgaven, men en bonus. */
 #widget-content-nav {
     position: absolute;
     top: 1rem;
@@ -114,16 +138,41 @@ footer {
 #widget-content-nav > p > span {
     padding: 0 30px;
 }
+#widget-toggler-nav {
+    position: relative;
+}
+
+
+
+/* En del forskjellige styling for diverse ikoner og hvordan de ligger i sitt element. */
 #social-icons-menu li {
     display: inline-block;
     font-size: 1.8rem;
     margin: 0.5rem 0.5rem;
 }
-
-#widget-toggler-nav {
-    position: relative;
+.social-icons {
+    font-size: 3rem;
+}
+.social-icons ul > li {
+    display: inline-block;
+    height: 0.5rem;
+}
+.fa-x {
+    margin-left: 0.5rem;
+}
+.fa-instagram {
+    color: #6f39ba
+}
+.fa-snapchat {
+    color: #fffc00;
+}
+.fa-facebook {
+    color: #4267b2;
 }
 
+
+
+/* Styling for en hero og hva jeg kaller en mini-hero, altså bokser med farge som har mye padding for å fylle ut fargen sin. */
 .hero {
     background-color: #6C2F62;
     color: #fff;
@@ -133,7 +182,6 @@ footer {
 .hero>a:visited {
     color: #fff;
 }
-
 .mini-hero {
     background-color: whitesmoke;
     width: 100%;
@@ -152,6 +200,9 @@ footer {
     color: #000;
 }
 
+
+
+/* Dette er css for forskjellige flex klasser. Disse er brukt på forskjellige måter. header-flex er som navnet tilsier bare brukt i headeren og sentrerer alt av innehold. main-flex er kun brukt på index siden og plasserer inneholdet under hverandre. grid-flex brukes i sammenheng med en annen klasse for å sette elementer sammen bortover en linje. */
 .header-flex {
     display: flex;
     flex-flow: row wrap;
@@ -160,16 +211,13 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 .main-flex {
     display: flex;
     flex-wrap: wrap;
-    height: relative;
     flex-direction: column;
     align-items: baseline;
     justify-content: center;
 }
-
 .grid-flex {
     display: flex;
     flex-flow: row wrap;
@@ -177,6 +225,9 @@ footer {
     align-items: baseline;
 }
 
+
+
+/* Forskjellige klasser som brukes sammen med grid-flex. flex-basis og margin er begge nødvendig for å plassere elementer riktig bortover en linje. med auto på bredde fyller den selv ut plassen. */
 .popular-products img {
     width: 85%;
 }
@@ -198,7 +249,6 @@ footer {
     margin: 0;
     padding: 0;
 }
-
 .categories-products img {
     width: 100%;
     object-fit: fill;
@@ -225,7 +275,6 @@ footer {
     margin: 0;
     padding: 0;
 }
-
 .qanda a, .qanda p {
     flex-basis: 100%;
     text-align: center;
@@ -239,15 +288,10 @@ footer {
     background-color: #DDDDDD;
     padding: 1rem;
 }
-.social-icons {
-    font-size: 3rem;
 
-}
-.social-icons ul > li {
-    display: inline-block;
-    height: 0.5rem;
-}
 
+
+/* Styling for pynt av tekst. */
 .indent {
     margin-left: 1.5rem;
     text-decoration: underline;
@@ -255,6 +299,9 @@ footer {
     text-decoration-thickness: 5px;
 }
 
+
+
+/* Styling for til top knappen. */
 #back-top a {
     color: #fff;
 }
@@ -272,18 +319,9 @@ footer {
     margin: 1rem auto;
 }
 
-.fa-instagram {
-    color: #6f39ba
-}
 
-.fa-snapchat {
-    color: #fffc00;
-}
 
-.fa-facebook {
-    color: #4267b2;
-}
-
+/* En kombinasjon av klasser som kombineres med flex-grid og styling som brukes på produkt og blog siden. */
 .product-card p, .product-card form, .product-card img, .blog-card p, .blog-card img, .blog-card iframe {
     flex-basis: 80%;
     margin: 1rem auto;
@@ -323,17 +361,20 @@ footer {
     background-color: #767676;
 }
 
+
+
+/* Alt av media queries er puttet her nede så det er mest oversiktelig. */
+
+/* Dette er for å gjøre hamburger-menyen litt større på større skjermer. */
 @media only screen and (min-width: 650px) {
     #widget-content-nav {
         max-width: 500px;
     }
 }
-
+/* Etter 1200px er det anset som at du er på desktop versjonen. Jeg legger jeg til 3 koloner i alt. */
 @media only screen and (min-width: 1200px) {
-    body {
-        #grid-container {
-            grid-template-columns: repeat(3, 1fr);
-        }
+    #grid-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     header {

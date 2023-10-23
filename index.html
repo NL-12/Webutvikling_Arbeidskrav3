@@ -1,23 +1,27 @@
+<!--- Standard HTML her i DOCTYPE og ned til slutten av head. style.css ligger i css og inneholder alt av css. Den første script-taggen er for font-awesome, den andre for min egen JavaScript funksjon. -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/6e7e32dccf.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="widget.js"></script>
+    <script src="widget.js"></script>
     <title>Komfortable Til Gangs: Hjem</title>
 </head>
 <body>
+    <!--- Her bruker jeg en div for å "wrappe" alle elementer i en grid. div blir brukt her spesifikt fordi den ikke har en semantisk verdi. -->
     <div id="grid-container">
+        <!-- Alt i header ligger inne i en flex container for å være responsivt og ligge riktig på nettsiden. -->
         <header class="header-flex">
             <nav>
                 <ul>
+                    <!--- Dette er ikke en ideel løsning, men for å få min hamburger-meny for å ligge under knappen riktig har jeg nøstet nav i nav. Dette er fordi den ytre nav har en position realtive og den indre position absolute.. Denne indre nav elementet er skjult og så gjort synlig med JavaScript. -->
                     <li id="widget-toggler-nav">
-                        <span id="widget-toggler-nav-button" class="fa-solid fa-bars"></span>
+                        <i id="widget-toggler-nav-button" class="fa-solid fa-bars"></i>
                         <nav id="widget-content-nav" class="hidden">
                             <p id="widget-closer-nav-button">
-                                <span class="fa-solid fa-x"></span>
+                                <i class="fa-solid fa-x"></i>
                             </p>
                             <ul>
                                 <li>
@@ -98,19 +102,19 @@
                             <ul id="social-icons-menu">
                                 <li>
                                     <a href="https://www.instagram.com/" target="_blank">
-                                        <span class="fa-brands fa-instagram"></span>
+                                        <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://nb-no.facebook.com/" target="_blank"><span class="fa-brands fa-facebook"></span>
+                                    <a href="https://nb-no.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.snapchat.com/" target="_blank"><span class="fa-brands fa-snapchat"></span>
+                                    <a href="https://www.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank"><span class="fa-solid fa-envelope"></span>
+                                    <a href="#" target="_blank"><i class="fa-solid fa-envelope"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -118,38 +122,41 @@
                     </li>
                     <li>
                         <a href="index.html">
-                            <span class="fa-solid fa-person-running"></span> Komfortable Til Gangs
+                            <i class="fa-solid fa-person-running"></i> Komfortable Til Gangs
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="fa-solid fa-user"></span>
+                            <i class="fa-solid fa-user"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="fa-solid fa-cart-shopping"></span>
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </a>
                     </li>
                 </ul>
-                <form id="search">
+                <form id="search-con">
                     <label for="search">
-                        <span class="fa-solid fa-magnifying-glass"></span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </label>
-                    <input type="text" name="search">
+                    <input type="text" id="search" name="search">
                 </form>
             </nav>
         </header>
 
         <main>
+            <!-- Her er en "hero", altså et stort "kort" med farge og stor tekst. Dette er for produkter. -->
             <article class="hero">
                 <h2>Alt du behøver for å lykkes med jogging</h2>
                 <a href="produkt.html">
-                    <p>Se hele utvalget her <span class="fa-solid fa-circle-arrow-right"></span></p>
+                    <p>Se hele utvalget her <i class="fa-solid fa-circle-arrow-right"></i></p>
                 </a>
             </article>
 
+            <!--- Her er oversikten over kategoriere. Disse ligger i en flex container så de er på linje og er responsive- -->
             <section class="grid-flex categories-products">
+                <!-- Denne h3 og hver article er et flex barn. -->
                 <h3 class="indent">Kategorier</h3>
                 <article>
                     <h4>Løpesko Vei</h4>
@@ -159,7 +166,7 @@
                     </p>
                     <a href="produkt.html">
                         <p>
-                            Se alle <span class="fa-solid fa-circle-arrow-right"></span>
+                            Se alle <i class="fa-solid fa-circle-arrow-right"></i>
                         </p>
                     </a>
                 </article>
@@ -171,7 +178,7 @@
                     </p>
                     <a href="produkt.html">
                         <p>
-                            Se alle <span class="fa-solid fa-circle-arrow-right"></span>
+                            Se alle <i class="fa-solid fa-circle-arrow-right"></i>
                         </p>
                     </a>
                 </article>
@@ -183,12 +190,13 @@
                     </p>
                     <a href="produkt.html">
                         <p>
-                            Se alle <span class="fa-solid fa-circle-arrow-right"></span>
+                            Se alle <i class="fa-solid fa-circle-arrow-right"></i>
                         </p>
                     </a>
                 </article>
             </section>
 
+            <!-- Denne er veldig lik den over, men hviser produkter istedetfor kategorier, men virker på samme måte. -->
             <section class="grid-flex popular-products">
                 <h3 class="indent">Populære produkter</h3>
                 <article>
@@ -229,44 +237,48 @@
                 </article>
                 <a href="produkt.html" class="indent">
                     <p>
-                        Se alle <span class="fa-solid fa-circle-arrow-right"></span>
+                        Se alle <i class="fa-solid fa-circle-arrow-right"></i>
                     </p>
                 </a>
             </section>
 
+            <!--- Så kommer en hero for bloggen. -->
             <article class="hero">
                 <h2>[Overskriften til det siste blogginnlegget]</h2>
                 <a href="blog-page.html">
                     <p>Les innlegget her
-                        <span class="fa-solid fa-circle-arrow-right"></span>
+                        <i class="fa-solid fa-circle-arrow-right"></i>
                     </p>
                 </a>
             </article>
         </main>
 
+        <!-- Her er footeren som også er en flex container. -->
         <footer class="grid-flex qanda">
+            <!-- En knapp for å gå tilbake til toppen av nettsiden. -->
             <p id="back-top">
                 <a href="#top">
-                    Til toppen <span class="fa-solid fa-circle-arrow-up"></span>
+                    Til toppen <i class="fa-solid fa-circle-arrow-up"></i>
                 </a>
             </p>
+            <!--- Tre sosiale medie ikoner på linke. -->
             <nav class="social-icons">
                 <ul>
                     <li>
                         <a href="https://www.instagram.com/" target="_blank">
-                            <span class="fa-brands fa-instagram"></span>
+                            <i class="fa-brands fa-instagram"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://nb-no.facebook.com/" target="_blank"><span class="fa-brands fa-facebook"></span>
+                        <a href="https://nb-no.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.snapchat.com/" target="_blank"><span class="fa-brands fa-snapchat"></span>
+                        <a href="https://www.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><span class="fa-solid fa-envelope"></span>
+                        <a href="#" target="_blank"><i class="fa-solid fa-envelope"></i>
                         </a>
                     </li>
                 </ul>
@@ -304,6 +316,7 @@
             </nav>
         </footer>
 
+        <!-- Asiden har blitt forenklet fra wireframen. Den er her en "mini-hero" som enten strekker seg bortover siden på mobil, eller blir en firkant på desktop. -->
         <aside class="mini-hero">
             <p>
                 <a href="#">Bli medlem, gratis!</a>
@@ -313,6 +326,7 @@
     </div>
 
     <script>
+        // Her legges det til eventlisterns på meny knappen og den skulte "x" knappen slik at de kan åpnes og lukkes.
         let togglerElementNAV = document.getElementById("widget-toggler-nav-button")
         let closerElementNAV = document.getElementById("widget-closer-nav-button")
         togglerElementNAV.addEventListener("click", (e) => {

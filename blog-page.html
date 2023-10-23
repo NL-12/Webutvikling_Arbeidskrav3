@@ -1,23 +1,27 @@
+<!--- Standard HTML her i DOCTYPE og ned til slutten av head. style.css ligger i css og inneholder alt av css. Den første script-taggen er for font-awesome, den andre for min egen JavaScript funksjon. -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/6e7e32dccf.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="widget.js"></script>
+    <script src="widget.js"></script>
     <title>Komfortable Til Gangs: Blog Side</title>
 </head>
 <body>
+    <!--- Her bruker jeg en div for å "wrappe" alle elementer i en grid. div blir brukt her spesifikt fordi den ikke har en semantisk verdi. -->
     <div id="grid-container">
+        <!-- Alt i header ligger inne i en flex container for å være responsivt og ligge riktig på nettsiden. -->
         <header class="header-flex">
             <nav>
                 <ul>
+                    <!--- Dette er ikke en ideel løsning, men for å få min hamburger-meny for å ligge under knappen riktig har jeg nøstet nav i nav. Dette er fordi den ytre nav har en position realtive og den indre position absolute.. Denne indre nav elementet er skjult og så gjort synlig med JavaScript. -->
                     <li id="widget-toggler-nav">
-                        <span id="widget-toggler-nav-button" class="fa-solid fa-bars"></span>
+                        <i id="widget-toggler-nav-button" class="fa-solid fa-bars"></i>
                         <nav id="widget-content-nav" class="hidden">
                             <p id="widget-closer-nav-button">
-                                <span class="fa-solid fa-x"></span>
+                                <i class="fa-solid fa-x"></i>
                             </p>
                             <ul>
                                 <li>
@@ -98,19 +102,19 @@
                             <ul id="social-icons-menu">
                                 <li>
                                     <a href="https://www.instagram.com/" target="_blank">
-                                        <span class="fa-brands fa-instagram"></span>
+                                        <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://nb-no.facebook.com/" target="_blank"><span class="fa-brands fa-facebook"></span>
+                                    <a href="https://nb-no.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.snapchat.com/" target="_blank"><span class="fa-brands fa-snapchat"></span>
+                                    <a href="https://www.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank"><span class="fa-solid fa-envelope"></span>
+                                    <a href="#" target="_blank"><i class="fa-solid fa-envelope"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -118,37 +122,38 @@
                     </li>
                     <li>
                         <a href="index.html">
-                            <span class="fa-solid fa-person-running"></span> Komfortable Til Gangs
+                            <i class="fa-solid fa-person-running"></i> Komfortable Til Gangs
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="fa-solid fa-user"></span>
+                            <i class="fa-solid fa-user"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="fa-solid fa-cart-shopping"></span>
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </a>
                     </li>
                 </ul>
-                <form id="search">
+                <form id="search-con">
                     <label for="search">
-                        <span class="fa-solid fa-magnifying-glass"></span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </label>
-                    <input type="text" name="search">
+                    <input type="text" id="search" name="search">
                 </form>
             </nav>
+            <!-- Unikt for produkt og blog. brødsmuler for å se hvor på nettsiden du befinner deg. -->
             <nav id="breadcrumbs">
                 <ul>
                     <li>
-                        <a href="#">Hjem</a> <span class="fa-solid fa-arrow-right"></span>
+                        <a href="#">Hjem</a> <i class="fa-solid fa-arrow-right"></i>
                     </li>
                     <li>
-                        <a href="#">Komme i gang</a> <span class="fa-solid fa-arrow-right"></span>
+                        <a href="#">Komme i gang</a> <i class="fa-solid fa-arrow-right"></i>
                     </li>
                     <li>
-                        <a href="#">Tips & trisk</a> <span class="fa-solid fa-arrow-right"></span>
+                        <a href="#">Tips & trisk</a> <i class="fa-solid fa-arrow-right"></i>
                     </li>
                     <li>
                         Hvordan bli super på jogging
@@ -158,11 +163,14 @@
         </header>
 
         <main>
+            <!-- Atter en flex container. Jeg har brukt disse mye siden de virket så bra. -->
             <article class="grid-flex blog-card">
                 <h2 class="indent">Hvordan blir super på jogging</h2>
                 <img src="img/competition-3052690_640.jpg" alt="Flere personer løper bortover asfalt i et maraton, synlig på bildet er benene til tre personer, og mange flere i bakgrunnen.">
                 <p>Bildet er tatt av <a href="https://pixabay.com/no/users/maxmann-665103/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3052690">Th G</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3052690">Pixabay</a></p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/DVfRPMY4wHU?si=ANn6GEgjp2ijAYVN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!-- Dette skulle være en video. Jeg fant ingen gode "stock-fotage" videoer å inkludere, og å ha med en tom video spiller forårsaker problemer. Alternative iframe er ikke noe bedre. -->
+                <img src="img/begin-1590051_640.jpg" alt="Et bilde av et maraton start på en løpebane, hvor mange forskjellige personer, unge og eldre, begynner å spurte.">
+                <p>Bildet er tatt av <a href="https://pixabay.com/no/users/ttersluisen-1120966/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1590051">Tim Tersluisen</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1590051">Pixabay</a></p>
                 <h3 class="indent">WDOJwdjowodpj</h3>
                 <p class="make-justify">
                     Nam ullamcorper faucibus fringilla. Phasellus congue efficitur enim id tristique. Donec hendrerit in ante eget tempor. Maecenas sodales leo quis orci hendrerit, in maximus ante ultricies. Morbi vestibulum ultricies purus, vitae aliquet nulla eleifend vitae. Aliquam quis ex tristique, pharetra sapien tincidunt, tincidunt ipsum. Morbi nec diam sed est bibendum tincidunt. Proin aliquam bibendum risus id semper. Sed facilisis consequat quam.
@@ -185,29 +193,32 @@
             </article>
         </main>
 
+        <!-- Her er footeren som også er en flex container. -->
         <footer class="grid-flex qanda">
+            <!-- En knapp for å gå tilbake til toppen av nettsiden. -->
             <p id="back-top">
                 <a href="#top">
-                    Til toppen <span class="fa-solid fa-circle-arrow-up"></span>
+                    Til toppen <i class="fa-solid fa-circle-arrow-up"></i>
                 </a>
             </p>
+            <!--- Tre sosiale medie ikoner på linke. -->
             <nav class="social-icons">
                 <ul>
                     <li>
                         <a href="https://www.instagram.com/" target="_blank">
-                            <span class="fa-brands fa-instagram"></span>
+                            <i class="fa-brands fa-instagram"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://nb-no.facebook.com/" target="_blank"><span class="fa-brands fa-facebook"></span>
+                        <a href="https://nb-no.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.snapchat.com/" target="_blank"><span class="fa-brands fa-snapchat"></span>
+                        <a href="https://www.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><span class="fa-solid fa-envelope"></span>
+                        <a href="#" target="_blank"><i class="fa-solid fa-envelope"></i>
                         </a>
                     </li>
                 </ul>
@@ -245,6 +256,7 @@
             </nav>
         </footer>
 
+        <!-- Asiden har blitt forenklet fra wireframen. Den er her en "mini-hero" som enten strekker seg bortover siden på mobil, eller blir en firkant på desktop. -->
         <aside class="mini-hero">
             <p>
                 <a href="#">Bli medlem, gratis!</a>
@@ -254,6 +266,7 @@
     </div>
 
     <script>
+        // Her legges det til eventlisterns på meny knappen og den skulte "x" knappen slik at de kan åpnes og lukkes.
         let togglerElementNAV = document.getElementById("widget-toggler-nav-button")
         let closerElementNAV = document.getElementById("widget-closer-nav-button")
         togglerElementNAV.addEventListener("click", (e) => {
