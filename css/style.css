@@ -60,7 +60,11 @@ header > nav > form > input {
     width: 100%;
 }
 #breadcrumbs {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+    flex-basis: 100%;
+}
+#breadcrumbs a {
+    text-decoration: underline;
 }
 
 main {
@@ -131,7 +135,7 @@ footer {
 }
 
 .mini-hero {
-    background-color: #fff;
+    background-color: whitesmoke;
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -247,7 +251,7 @@ footer {
 .indent {
     margin-left: 1.5rem;
     text-decoration: underline;
-    text-underline-offset: 0.3rem;
+    text-underline-offset: 0.4rem;
     text-decoration-thickness: 5px;
 }
 
@@ -278,4 +282,40 @@ footer {
 
 .fa-facebook {
     color: #4267b2;
+}
+
+.product-card img {
+    text-align: center;
+    width: 100%;
+    flex-basis: 100%;
+}
+.product-card p, .product-card form, .product-card img {
+    flex-basis: 80%;
+    margin: 1rem auto;
+}
+.product-card form>select {
+    width: 300px;
+    height: auto;
+    font-size: 1rem;
+}
+.product-card h2 {
+    flex-basis: 100%;
+}
+.credit-text {
+    font-size: 0.8rem;
+}
+.circle-empty {
+    color: grey;
+}
+.make-center {
+    text-align: center;
+}
+.make-justify {
+    text-align: justify;
+}
+.big-text {
+    font-size: 1.3rem;
+}
+.gray-background {
+    background-color: #767676;
 }
